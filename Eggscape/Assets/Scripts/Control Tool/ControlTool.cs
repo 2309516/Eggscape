@@ -13,16 +13,20 @@ public class ObjectMover : MonoBehaviour
     private Transform player;
     private Vector3 initialObjectPosition;
     private float objectDistanceFromCamera;
-    public float moveVerticalAmount = 0.1f;
+    public float moveVerticalAmount = 0.1f; 
+    [Range(1f, 1000f)]
+    public float dragSpeed =300f;
+    [Range(1f, 1000f)]
+    public float moveSpeedSlider = 100f;
 
-    void Start()
+    private void Start()
     {
         mainCamera = Camera.main;
         rb = GetComponent<Rigidbody>();
         player = Camera.main.transform;
     }
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         if (mainCamera != null)
         {
@@ -48,25 +52,28 @@ public class ObjectMover : MonoBehaviour
         }
     }
 
-    void OnMouseDrag()
+    private void OnMouseDrag()
     {
         if (isDragging && mainCamera != null)
         {
             Vector3 cameraForward = mainCamera.transform.forward;
             Vector3 targetPosition = player.position + cameraForward * objectDistanceFromCamera;
             targetPosition.y = transform.position.y;
+
             if (rb != null)
-            {
-                rb.MovePosition(Vector3.Lerp(rb.position, targetPosition, dragStrength * Time.deltaTime));
+            {               
+                Vector3 direction = targetPosition - transform.position;
+                Vector3 velocity = direction.normalized * dragSpeed * Time.deltaTime;                
+                rb.velocity = velocity;
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, targetPosition, dragStrength * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, targetPosition, dragSpeed * Time.deltaTime);
             }
         }
     }
 
-    void OnMouseUp()
+    private void OnMouseUp()
     {
         isDragging = false;
 
@@ -77,7 +84,7 @@ public class ObjectMover : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKey(KeyCode.E))
         {
@@ -89,7 +96,7 @@ public class ObjectMover : MonoBehaviour
         }
     }
 
-    void MoveObjectVertically(float verticalMovement)
+    private void MoveObjectVertically(float verticalMovement)
     {
         if (rb != null)
         {

@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|c:\\users\\2309516\\documents\\github\\eggscape\\eggscape\\assets\\scripts\\control tool\\controltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\control tool\\controltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:30:32.754Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,9 +24,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Control Tool\\ControlTool.cs",
               "ToolTip": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Control Tool\\ControlTool.cs",
               "RelativeToolTip": "Assets\\Scripts\\Control Tool\\ControlTool.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:44:52.478Z",
+              "WhenOpened": "2024-11-19T16:10:57.518Z",
               "EditorCaption": ""
             }
           ]
