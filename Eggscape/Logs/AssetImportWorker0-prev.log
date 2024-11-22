@@ -15,7 +15,7 @@ C:/Users/2309516/Documents/GitHub/Eggscape/Eggscape
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54294
+62842
 Successfully changed project path to: C:/Users/2309516/Documents/GitHub/Eggscape/Eggscape
 C:/Users/2309516/Documents/GitHub/Eggscape/Eggscape
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/2309516/Documents/GitHub/Eggscape/Eggscape
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [18420] Host "[IP] 10.4.7.11 [Port] 0 [Flags] 2 [Guid] 1598365042 [EditorId] 1598365042 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21B-20) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [21048] Host "[IP] 10.4.7.11 [Port] 0 [Flags] 2 [Guid] 3147577946 [EditorId] 3147577946 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21B-20) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [18420] Host "[IP] 10.4.7.11 [Port] 0 [Flags] 2 [Guid] 1598365042 [EditorId] 1598365042 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21B-20) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [21048] Host "[IP] 10.4.7.11 [Port] 0 [Flags] 2 [Guid] 3147577946 [EditorId] 3147577946 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21B-20) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-Refreshing native plugins compatible for Editor in 33.64 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 26.43 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.33f1 (b2c853adf198)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.33f1/Editor/Data/Resources/UnitySubsystems
@@ -70,51 +70,51 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.33f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.33f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.33f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.33f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.015733 seconds.
-- Loaded All Assemblies, in  0.473 seconds
+Registered in 0.016297 seconds.
+- Loaded All Assemblies, in  0.480 seconds
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 623 ms
+Android Extension - Scanning For ADB Devices 649 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.001 seconds
-Domain Reload Profiling: 1472ms
-	BeginReloadAssembly (170ms)
+- Finished resetting the current domain, in  1.034 seconds
+Domain Reload Profiling: 1512ms
+	BeginReloadAssembly (176ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (38ms)
+	RebuildCommonClasses (39ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (68ms)
-	LoadAllAssembliesAndSetupDomain (185ms)
-		LoadAssemblies (171ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (182ms)
+		LoadAssemblies (176ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (179ms)
-			TypeCache.Refresh (178ms)
-				TypeCache.ScanAssembly (160ms)
+		AnalyzeDomain (177ms)
+			TypeCache.Refresh (175ms)
+				TypeCache.ScanAssembly (157ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1001ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (1034ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (943ms)
+		SetupLoadedEditorAssemblies (975ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (776ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (804ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (110ms)
-			ProcessInitializeOnLoadMethodAttributes (50ms)
+			ProcessInitializeOnLoadAttributes (113ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -122,8 +122,8 @@ Domain Reload Profiling: 1472ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.857 seconds
-Refreshing native plugins compatible for Editor in 12.16 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.890 seconds
+Refreshing native plugins compatible for Editor in 11.37 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -132,47 +132,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.690 seconds
-Domain Reload Profiling: 1544ms
-	BeginReloadAssembly (206ms)
+- Finished resetting the current domain, in  0.716 seconds
+Domain Reload Profiling: 1602ms
+	BeginReloadAssembly (220ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (36ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (40ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (551ms)
-		LoadAssemblies (476ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (566ms)
+		LoadAssemblies (490ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (215ms)
-			TypeCache.Refresh (189ms)
-				TypeCache.ScanAssembly (168ms)
-			ScanForSourceGeneratedMonoScriptInfo (19ms)
+		AnalyzeDomain (224ms)
+			TypeCache.Refresh (197ms)
+				TypeCache.ScanAssembly (175ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (691ms)
+	FinalizeReload (716ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (510ms)
+		SetupLoadedEditorAssemblies (532ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (41ms)
+			InitializePlatformSupportModulesInManaged (43ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (65ms)
-			ProcessInitializeOnLoadAttributes (368ms)
-			ProcessInitializeOnLoadMethodAttributes (23ms)
+			BeforeProcessingInitializeOnLoad (66ms)
+			ProcessInitializeOnLoadAttributes (385ms)
+			ProcessInitializeOnLoadMethodAttributes (24ms)
 			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 11.70 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (13ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 15.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3522 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (107.6 KB). Loaded Objects now: 3987.
+Unloading 38 unused Assets / (115.1 KB). Loaded Objects now: 3987.
 Memory consumption went from 144.1 MB to 143.9 MB.
-Total: 3.869100 ms (FindLiveObjects: 0.363900 ms CreateObjectMapping: 0.210300 ms MarkObjects: 3.137600 ms  DeleteObjects: 0.156400 ms)
+Total: 4.013000 ms (FindLiveObjects: 0.377200 ms CreateObjectMapping: 0.208900 ms MarkObjects: 3.257400 ms  DeleteObjects: 0.167900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -190,141 +190,33 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 252081.572627 seconds.
-  path: Assets/Rotating Wall.prefab
-  artifactKey: Guid(367d15f2df91aa54fb4472ab68156b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rotating Wall.prefab using Guid(367d15f2df91aa54fb4472ab68156b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+  Time since last request: 257688.479820 seconds.
+  path: Assets/Models/egg 4.jpg
+  artifactKey: Guid(6be3459252543c74484e93d0684e8adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/egg 4.jpg using Guid(6be3459252543c74484e93d0684e8adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '1d3b29fb79c44c22831f2b5b54e0195f') in 0.238111 seconds
+ -> (artifact id: 'bbe1cd833c06d661196428dee863dd19') in 0.060291 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 21
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 3.793346 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D
-  artifactKey: Guid(f2c11c33b36edd240932f7bb597deae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D using Guid(f2c11c33b36edd240932f7bb597deae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '6fa0122708f01351f9894f478f3f5647') in 0.000778 seconds
+  Time since last request: 0.000034 seconds.
+  path: Assets/Models/desktop.ini
+  artifactKey: Guid(3833f3e89f6a5e1459d88e8f30b2799d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/desktop.ini using Guid(3833f3e89f6a5e1459d88e8f30b2799d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'db98f8836531c2101743c061bfb2b312') in 0.001095 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 6.004265 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Textures
-  artifactKey: Guid(99ce4fc4b646a70469f8a747c2556985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Textures using Guid(99ce4fc4b646a70469f8a747c2556985) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '3b4fd5cd78578b45d069aa16e4abc627') in 0.000803 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.908552 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs
-  artifactKey: Guid(22524bf17cfb1b04bb39db3b92a38b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs using Guid(22524bf17cfb1b04bb39db3b92a38b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '3ec72f3b406271a62381cb8d77817d58') in 0.000612 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.086412 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Chair.prefab
-  artifactKey: Guid(1d6bd57fef0d09a4ca288a9353656510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Chair.prefab using Guid(1d6bd57fef0d09a4ca288a9353656510) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Models/egg 5.jpg
+  artifactKey: Guid(0e35eaba4f36bf743b98bda1c6b5b967) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/egg 5.jpg using Guid(0e35eaba4f36bf743b98bda1c6b5b967) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: 'a93356b08881990fa5a8d0ecf33181dd') in 0.090766 seconds
+ -> (artifact id: '0fbae3d69291f0ca8c0577ffb0e20786') in 0.013717 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 17
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Lamp.prefab
-  artifactKey: Guid(914c5735a951c984a9e92d3cb2d61295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Lamp.prefab using Guid(914c5735a951c984a9e92d3cb2d61295) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '5a62ad876fbee16e7a9048bcdf90dd5a') in 0.015479 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 26
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Microwave.prefab
-  artifactKey: Guid(5c300e2de5fdc0d43b2b7997de4aa97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Microwave.prefab using Guid(5c300e2de5fdc0d43b2b7997de4aa97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: 'b689251b9176b2099c9057d4da3230ed') in 0.097279 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 41
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Window.prefab
-  artifactKey: Guid(6828c129a882e6a40bcafc7ccfa07d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Window.prefab using Guid(6828c129a882e6a40bcafc7ccfa07d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '74acfc5df8b716351c9b9bad1fa55444') in 0.020896 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 17
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/FurnitureTop.prefab
-  artifactKey: Guid(79c4c05c96267134e85128b5ce034029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/FurnitureTop.prefab using Guid(79c4c05c96267134e85128b5ce034029) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '2c3dc9d580f644ba9b1d56575f74edb2') in 0.206865 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Stove.prefab
-  artifactKey: Guid(4cae36a7b19e0bd48b1eed4c18704d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Stove.prefab using Guid(4cae36a7b19e0bd48b1eed4c18704d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '45f7a1f563c4bd8295ed7d7078bea2b5') in 0.021206 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 87
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Wall.prefab
-  artifactKey: Guid(09c6fa641753ad24db5a80f93e84ce20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Wall.prefab using Guid(09c6fa641753ad24db5a80f93e84ce20) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '8c790ec5333279c0a91f086a1b76d937') in 0.019975 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Toaster.prefab
-  artifactKey: Guid(bc5ace9739a08124cb086b53e6f71b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Toaster.prefab using Guid(bc5ace9739a08124cb086b53e6f71b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '7de7bea3e77fcde4e4e978e7df34846a') in 0.013544 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 48
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Fridge.prefab
-  artifactKey: Guid(c06a7efe995a5fb4b8324567db312f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Fridge.prefab using Guid(c06a7efe995a5fb4b8324567db312f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '59b1614aef8af7942bfb00d9420d68da') in 0.014472 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 49
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Table.prefab
-  artifactKey: Guid(d5355b20c318ae04fb5011b4f6fa07e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/KitchenFurnitureStarterPack-Mavi3D/Prefabs/Table.prefab using Guid(d5355b20c318ae04fb5011b4f6fa07e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '8f236e8f43b26f8ec268fc4d5a4f2267') in 0.210353 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
+Number of asset objects unloaded after import = 2
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server
