@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
             _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             _isGrounded = false;
         }
-        Debug.Log("Player Velocity: " + _rb.velocity.magnitude);
+        //Debug.Log("Player Velocity: " + _rb.velocity.magnitude);
 
         if (Input.GetKeyDown(KeyCode.R))
         {

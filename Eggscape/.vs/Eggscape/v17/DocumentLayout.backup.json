@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|c:\\users\\2309516\\documents\\github\\eggscape\\eggscape\\assets\\scripts\\object scripts\\spinningwall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\object scripts\\spinningwall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|c:\\users\\2309516\\documents\\github\\eggscape\\eggscape\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\assets\\scripts\\control tool\\controltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9EE62A-5ED4-ECD4-E269-9513B910B441}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\control tool\\controltool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SpinningWall.cs",
-              "DocumentMoniker": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Object Scripts\\SpinningWall.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Object Scripts\\SpinningWall.cs",
-              "ToolTip": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Object Scripts\\SpinningWall.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Object Scripts\\SpinningWall.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:52:32.22Z",
+              "WhenOpened": "2024-11-22T16:53:10.548Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControlTool.cs",
+              "DocumentMoniker": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Control Tool\\ControlTool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Control Tool\\ControlTool.cs",
+              "ToolTip": "C:\\Users\\2309516\\Documents\\GitHub\\Eggscape\\Eggscape\\Assets\\Scripts\\Control Tool\\ControlTool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Control Tool\\ControlTool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T15:19:52.426Z"
             }
           ]
         }

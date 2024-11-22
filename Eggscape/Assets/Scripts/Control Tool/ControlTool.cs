@@ -65,10 +65,12 @@ public class ObjectMover : MonoBehaviour
                 Vector3 direction = targetPosition - transform.position;
                 Vector3 velocity = direction.normalized * dragSpeed * Time.deltaTime;                
                 rb.velocity = velocity;
+                if (Vector3.Distance(transform.position, targetPosition) < 0.25) rb.velocity = Vector3.zero; 
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, targetPosition, dragSpeed * Time.deltaTime);
+                // that 1000 could bite you in the arse, keep an eye on it :)
+                transform.position = Vector3.Lerp(transform.position, targetPosition, (dragSpeed * 1000) * Time.deltaTime);
             }
         }
     }
