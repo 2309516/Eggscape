@@ -204,7 +204,7 @@ public class EggCollisionDetector : MonoBehaviour
 - The code for the buttons to navigate between the scenes was fairly simple as seen below. It was code we had used before so knew how it worked and how to adapt it.
 
 #### RestartScreen.cs
-```
+```csharp
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -221,7 +221,7 @@ public class RestartGame : MonoBehaviour {
 ```
 
 #### PlayGame.cs
-```
+```csharp
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -236,7 +236,7 @@ public class PlayGame : MonoBehaviour
 }
 ```
 #### MainMenu.cs
-```
+```csharp
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -251,14 +251,14 @@ public class MainMenu : MonoBehaviour
 }
 ```
 #### QuitGame.cs
-```
+```csharp
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
-    void doExitGame() {
+    public void QuitG(){
         Application.Quit();
     }
 }
