@@ -13,7 +13,7 @@ Anna Rogers
 
 ### Concept
 
-- Within the group game as a whole, we ended up going through many different game ideas before we landon on one that stuck. Initially we planned on making a dropper game similar to the minecraft droppers, then we moved onto the idea of a vertical playformer game but ultimately we ended up deciding on a slower paced, dark puzzle escape game. (Minecraft Maps, 2022)   (Wikipedia, 2024)
+- Within the group game as a whole, we ended up going through many different game ideas before we landed on on one that stuck. Initially we planned on making a dropper game similar to the minecraft droppers, then we moved onto the idea of a vertical playformer game but ultimately we ended up deciding on a slower paced, dark puzzle escape game. (Minecraft Maps, 2022)   (Wikipedia, 2024)
 
 - With the egg theme we were given we thought it might be interesting to make the player have to find and cook the egg. This concept was built upon throughout the development of the game.
 
