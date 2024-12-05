@@ -268,7 +268,7 @@ public class QuitGame : MonoBehaviour
 
 - [Link to the game on Itch.io]()
 - [Link to the Github Repository](https://github.com/2309516/Eggscape)
-- [Link to gameplay video demonstration]()
+- [Link to gameplay video demonstration](https://youtu.be/sI5QB1C4oDc)
 
 ## Reflection
 
