@@ -67,11 +67,11 @@ private void Awake()
 
 - Following that, the map design came next. A big part of the game comes from its hidden paths and secret corners so we took time to plan out and draw the map in order to create a cohesive and challenging experience for the player.
 
-![SceneMap](GroupGameMap.png)
+![SceneMap](https://raw.githubusercontent.com/2309516/Eggscape/refs/heads/main/GroupGameMap.png)
 
 - With the mapped out level above, we imported some world building assets and got started making the level. (@UnityAssetStore, 2019)
 
-![In Engine Level](<group game editor image.png>)
+![In Engine Level](https://raw.githubusercontent.com/2309516/Eggscape/refs/heads/main/group%20game%20editor%20image.png)
 
 - The next major part of gameplay was going to be the ability to pick up and manipulare the eggs location within the level. Throughout making this work we encountered many bugs such as the object clipping through walls, the egg flying away when you moved and violently shaking in place wehn you were standing still. Eventually after lots of trial and error we ended up with the following script.
 
@@ -175,7 +175,7 @@ private void Start()
 
 - Getting the game to complete when the egg touches the microwave was simple and we just used colission detection to do this
 
-![microwave](microwave.png)
+![microwave](https://raw.githubusercontent.com/2309516/Eggscape/refs/heads/main/microwave.png)
 ```csharp
 using UnityEngine;
 using UnityEngine.SceneManagement;

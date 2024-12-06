@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Development Journal.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="development-journal---eggscape">Development Journal - Eggscape</h1>
+<p>Fundamentals of Game Development (FGCT4015)</p>
+<p>Bradley Curtis</p>
+<p>2309516</p>
+<p>Anna Rogers</p>
+<p>2315276</p>
+<h2 id="research">Research</h2>
+<h3 id="concept">Concept</h3>
+<ul>
+<li>
+<p>Within the group game as a whole, we ended up going through many different game ideas before we landed on on one that stuck. Initially we planned on making a dropper game similar to the minecraft droppers, then we moved onto the idea of a vertical playformer game but ultimately we ended up deciding on a slower paced, dark puzzle escape game. (Minecraft Maps, 2022)   (Wikipedia, 2024)</p>
+</li>
+<li>
+<p>With the egg theme we were given we thought it might be interesting to make the player have to find and cook the egg. This concept was built upon throughout the development of the game.</p>
+</li>
+</ul>
+<h1 id="the-process">The Process</h1>
+<h3 id="gameplay">Gameplay</h3>
+<ul>
+<li>Starting off with basic player movement, we had just copied over a script from one of our previous projects and changed some of the values to make it feel more fluid within the smaller map design.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span>(<span class="hljs-params"></span>)</span>
+    {
+        _rb = GetComponent&lt;Rigidbody&gt;();
+        _mainCamera = Camera.main;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-keyword">if</span> (Input.GetKeyDown(KeyCode.Space) &amp;&amp; _isGrounded)
+        {
+            _rb.velocity = <span class="hljs-keyword">new</span> Vector3(_rb.velocity.x, <span class="hljs-number">0</span>, _rb.velocity.z);
+            _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            _isGrounded = <span class="hljs-literal">false</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+        }
+        <span class="hljs-keyword">if</span> (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitToMenu();
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span>(<span class="hljs-params"></span>)</span>
+    {
+        Vector3 cameraForward = Vector3.Scale(_mainCamera.transform.forward, <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>)).normalized;
+        Vector3 movement = (cameraForward * Input.GetAxis(<span class="hljs-string">"Vertical"</span>) + _mainCamera.transform.right * Input.GetAxis(<span class="hljs-string">"Horizontal"</span>)).normalized;
+
+        _rb.AddForce(movement * playerSpeed * (_isGrounded ? <span class="hljs-number">1</span> : airControlFactor), ForceMode.Force);
+
+        <span class="hljs-keyword">if</span> (_rb.velocity.magnitude &gt; maxVelocity)
+        {
+            _rb.velocity = _rb.velocity.normalized * maxVelocity;
+        }
+
+        _isGrounded = Physics.Raycast(transform.position + Vector3.up * <span class="hljs-number">0.5f</span>, Vector3.down, <span class="hljs-number">2f</span>, ~<span class="hljs-number">0</span>);
+        _rb.drag = _isGrounded ? groundDrag : <span class="hljs-number">0f</span>;
+    }
+</div></code></pre>
+<ul>
+<li>Following that, the map design came next. A big part of the game comes from its hidden paths and secret corners so we took time to plan out and draw the map in order to create a cohesive and challenging experience for the player.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/2309516/Eggscape/refs/heads/main/GroupGameMap.png" alt="SceneMap"></p>
+<ul>
+<li>With the mapped out level above, we imported some world building assets and got started making the level. (@UnityAssetStore, 2019)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/2309516/Eggscape/refs/heads/main/group game editor image.png" alt="In Engine Level"></p>
+<ul>
+<li>The next major part of gameplay was going to be the ability to pick up and manipulare the eggs location within the level. Throughout making this work we encountered many bugs such as the object clipping through walls, the egg flying away when you moved and violently shaking in place wehn you were standing still. Eventually after lots of trial and error we ended up with the following script.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>(<span class="hljs-params"></span>)</span>
+    {
+        mainCamera = Camera.main;
+        rb = GetComponent&lt;Rigidbody&gt;();
+        player = Camera.main.transform;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMouseDown</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-keyword">if</span> (mainCamera != <span class="hljs-literal">null</span>)
+        {
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            <span class="hljs-keyword">if</span> (Physics.Raycast(ray, <span class="hljs-keyword">out</span> hit, Mathf.Infinity, draggableLayer))
+            {
+                <span class="hljs-keyword">if</span> (hit.collider == GetComponent&lt;Collider&gt;())
+                {
+                    offset = transform.position - hit.point;
+                    isDragging = <span class="hljs-literal">true</span>;
+                    objectDistanceFromCamera = Vector3.Distance(transform.position, player.position);
+
+                    <span class="hljs-keyword">if</span> (rb != <span class="hljs-literal">null</span>)
+                    {
+                        rb.useGravity = <span class="hljs-literal">false</span>;
+                        rb.isKinematic = <span class="hljs-literal">false</span>;
+                        rb.constraints = RigidbodyConstraints.FreezeRotation;
+                    }
+                }
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMouseDrag</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-keyword">if</span> (isDragging &amp;&amp; mainCamera != <span class="hljs-literal">null</span>)
+        {
+            Vector3 cameraForward = mainCamera.transform.forward;
+            Vector3 targetPosition = player.position + cameraForward * objectDistanceFromCamera;
+            targetPosition.y = transform.position.y;
+
+            <span class="hljs-keyword">if</span> (rb != <span class="hljs-literal">null</span>)
+            {               
+                Vector3 direction = targetPosition - transform.position;
+                Vector3 velocity = direction.normalized * dragSpeed * Time.deltaTime;                
+                rb.velocity = velocity;
+                <span class="hljs-keyword">if</span> (Vector3.Distance(transform.position, targetPosition) &lt; <span class="hljs-number">0.25</span>) rb.velocity = Vector3.zero; 
+            }
+            <span class="hljs-keyword">else</span>
+            {
+                transform.position = Vector3.Lerp(transform.position, targetPosition, (dragSpeed * <span class="hljs-number">1000</span>) * Time.deltaTime);
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMouseUp</span>(<span class="hljs-params"></span>)</span>
+    {
+        isDragging = <span class="hljs-literal">false</span>;
+
+        <span class="hljs-keyword">if</span> (rb != <span class="hljs-literal">null</span>)
+        {
+            rb.useGravity = <span class="hljs-literal">true</span>;
+            rb.constraints = RigidbodyConstraints.None;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-keyword">if</span> (Input.GetKey(KeyCode.E))
+        {
+            MoveObjectVertically(moveVerticalAmount);
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (Input.GetKey(KeyCode.Q))
+        {
+            MoveObjectVertically(-moveVerticalAmount);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MoveObjectVertically</span>(<span class="hljs-params"><span class="hljs-keyword">float</span> verticalMovement</span>)</span>
+    {
+        <span class="hljs-keyword">if</span> (rb != <span class="hljs-literal">null</span>)
+        {
+            Vector3 verticalMove = <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0f</span>, verticalMovement, <span class="hljs-number">0f</span>);
+            rb.MovePosition(transform.position + verticalMove);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            transform.position += <span class="hljs-keyword">new</span> Vector3(<span class="hljs-number">0f</span>, verticalMovement, <span class="hljs-number">0f</span>);
+        }
+    }
+}
+</div></code></pre>
+<ul>
+<li>
+<p>The above code allowed us to continue with the entire game idea as if we werent able to get this working we would need to rething our entire game.</p>
+</li>
+<li>
+<p>Most of the code in the above script was made with previous knowedge of physics concepts however a lot of time was spent looking at Unity's Scripting API website for getting the raycast to work as intended (Unity Technologies, 2019)</p>
+</li>
+<li>
+<p>Getting the game to complete when the egg touches the microwave was simple and we just used colission detection to do this</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/2309516/Eggscape/refs/heads/main/microwave.png" alt="microwave"></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">using</span> UnityEngine;
+<span class="hljs-keyword">using</span> UnityEngine.SceneManagement;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">EggCollisionDetector</span> : <span class="hljs-title">MonoBehaviour</span>
+{    
+    <span class="hljs-keyword">public</span> GameObject objectToDetect;
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnCollisionEnter</span>(<span class="hljs-params">Collision collision</span>)</span>
+    {
+
+        <span class="hljs-keyword">if</span> (collision.gameObject == objectToDetect)
+        {
+            SceneManager.LoadScene(<span class="hljs-number">3</span>);
+            Debug.Log(<span class="hljs-string">"Collision detected with the specified object: "</span> + objectToDetect.name);
+
+        }
+    }
+}
+</div></code></pre>
+<h3 id="music">Music</h3>
+<ul>
+<li>For the music we wanted to create an upbeat horror ambience. We wanted it to be somewhere between horror ambience and the type of music that you can bop your head to as our game isnt a full on horror game and has a fun element to it.</li>
+</ul>
+<h3 id="scenes">Scenes</h3>
+<ul>
+<li>
+<p>For the menu, death screen and win screen we used different scenes and coded them to switch between when certain criteria is met. For the canvas background we used an egg texture that was made by Anna on photoshop using the maya UV unwrap.</p>
+</li>
+<li>
+<p>The code for the buttons to navigate between the scenes was fairly simple as seen below. It was code we had used before so knew how it worked and how to adapt it.</p>
+</li>
+</ul>
+<h4 id="restartscreencs">RestartScreen.cs</h4>
+<pre class="hljs"><code><div>
+<span class="hljs-keyword">using</span> UnityEngine;
+<span class="hljs-keyword">using</span> UnityEngine.SceneManagement;
+<span class="hljs-keyword">using</span> System.Collections;
+    
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">RestartGame</span> : <span class="hljs-title">MonoBehaviour</span> {
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Restart</span>(<span class="hljs-params"></span>)</span> {
+        SceneManager.LoadScene(<span class="hljs-number">1</span>);
+    }
+    
+} 
+
+</div></code></pre>
+<h4 id="playgamecs">PlayGame.cs</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">using</span> System.Collections;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+<span class="hljs-keyword">using</span> UnityEngine;
+<span class="hljs-keyword">using</span> UnityEngine.SceneManagement;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PlayGame</span> : <span class="hljs-title">MonoBehaviour</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadGame</span>(<span class="hljs-params"></span>)</span>
+    {
+        SceneManager.LoadScene(<span class="hljs-number">1</span>);
+    }
+}
+</div></code></pre>
+<h4 id="mainmenucs">MainMenu.cs</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">using</span> System.Collections;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+<span class="hljs-keyword">using</span> UnityEngine;
+<span class="hljs-keyword">using</span> UnityEngine.SceneManagement;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MainMenu</span> : <span class="hljs-title">MonoBehaviour</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">LoadGame</span>(<span class="hljs-params"></span>)</span>
+    {
+        SceneManager.LoadScene(<span class="hljs-number">0</span>);
+    }
+}
+</div></code></pre>
+<h4 id="quitgamecs">QuitGame.cs</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">using</span> System.Collections;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+<span class="hljs-keyword">using</span> UnityEngine;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">QuitGame</span> : <span class="hljs-title">MonoBehaviour</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">QuitG</span>(<span class="hljs-params"></span>)</span>{
+        Application.Quit();
+    }
+}
+
+</div></code></pre>
+<ul>
+<li><a href="">Link to the game on Itch.io</a></li>
+<li><a href="https://github.com/2309516/Eggscape">Link to the Github Repository</a></li>
+<li><a href="https://youtu.be/sI5QB1C4oDc">Link to gameplay video demonstration</a></li>
+</ul>
+<h2 id="reflection">Reflection</h2>
+<h3 id="what-would-you-do-differently-next-time">What would you do differently next time?</h3>
+<ul>
+<li>
+<p>If we could start the group game over again we both agree that more planning and preperation wouldve set us up to have a better product at the end of the 10 weeks.</p>
+</li>
+<li>
+<p>Communication throughout the process of developing the game hasnt stable all the way through. Some weeks neither of us touched the game and trying to come back to it after a while ended up eating more time than slowing working on the game consistantly over the assignment period. Therefore if we could go back and work on it all over again we would both do little bits consistantly rather than a lot of work at the end,</p>
+</li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<h3 id="what-was-the-process-of-completing-the-task-what-influenced-your-decision-making">What was the process of completing the task? What influenced your decision making?</h3>
+<ul>
+<li>Due to a lack of proper planning, a big factor of whaty influenced decision making came down to the amount of time we had left when we really started focussing on the game. This led to underdeveloped ideas a some areas of poor execution.</li>
+</ul>
+<h3 id="what-was-the-process-of-completing-the-task-at-hand-did-you-do-any-initial-planning">What was the process of completing the task at hand? Did you do any initial planning?</h3>
+<ul>
+<li>We did have initial planning such as dividing up tasks and research and then colaborating one day each week. The actual game idea changed over the weeks and most of the initial planned ended up not being used.</li>
+</ul>
+<h3 id="did-you-receive-any-feedback-from-users-peers-or-lecturers-how-did-you-react-to-it">Did you receive any feedback from users, peers or lecturers? How did you react to it?</h3>
+<ul>
+<li>
+<p>The feedback we recieved was about the lighting in the game. The game was too dark to where you couldn't see were going because. Because of how dark the game was, when you dropped the egg it was virtually impossible to find without starting over.</p>
+</li>
+<li>
+<p>We ended up changing elements of the game off of the back of this feedback. The changes we made were adding more lighting and a light to make the egg glow. We did this because if we added more lighting then we already did to the game the world would be too bright, therefore adding the glowing egg meant we didnt need to ruin the darker aspect of the game.</p>
+</li>
+</ul>
+<h3 id="what-creative-or-technical-approaches-did-you-use-or-try-and-how-did-this-contribute-to-the-outcome">What creative or technical approaches did you use or try, and how did this contribute to the outcome?</h3>
+<ul>
+<li>The main and most obvious creative approach was to make the game horror-esque whilst retaining the lighthearted egg aspect we were given. Making the scene dark and spooky with spread out lighing and an aspect of being rushed with the timer constantly ticking down allowed us to make the game more simple in terms of the technical aspect. As the player is going to be tring to find their way out of the dark maze, they will be less focused on the fact that the only real gameplay aspect is the ability to pick up and move the egg. This gave us a lot of freedom to create the level how we want whilst maintaining the simple gameplay loop.</li>
+</ul>
+<h3 id="did-you-have-any-technical-difficulties-if-so-what-were-they-and-did-you-manage-to-overcome-them">Did you have any technical difficulties? If so, what were they and did you manage to overcome them?</h3>
+<ul>
+<li>
+<p>The main technical difficulties we had was time management. We both agree that we put the game off for longer than we should have and this impacted the depth of our ideas.</p>
+</li>
+<li>
+<p>At one point we struggled with merge conflicts as well as sometimes working on the wrong iteration of the game which ended up in lost work and wasted time.</p>
+</li>
+</ul>
+<h2 id="self-evaluation">Self Evaluation</h2>
+<h3 id="anna">Anna</h3>
+<p>Due to struggles with code and time management on projects before this one I was late to helping with this game. It took me a while to be able to help with this game, but the work I did do further refined the game as a whole and added finishing touches. I also added my own egg texture which I created with the knowledge I gained from 3D, and used this as the cover art, making simplistic and straightforward interactible screens.</p>
+<p>I know I could have done more for this project, and regret not sorting my prior assignments out sooner. If I had done I would have been more of an aid for this project.</p>
+<h3 id="bradley">Bradley</h3>
+<p>I feel that I could have possibly added more in depth mechanics, maybe enemies and other gameplay aspects to improve the feel of the game however with that said, I am happy with how the game turned out in the end. My scripts for both the player movement and control tool as well as designing the layout of the game gave us both a good starting ground to work with.</p>
+<p>Moving forward, proper planning as well as having a solid gameplay direction is going to be something I work on having before I start any project as I believe this well help me drastically in the long run.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p>Minecraft Maps. (2022). Dropper - Minecraft Maps. [online] Available at: https://www.minecraftmaps.com/dropper (Accessed  04/10/2024).</p>
+<p>Wikipedia. (2024). Only Up! [online] Available at: https://en.wikipedia.org/wiki/Only_Up. (Accessed  04/10/2024).</p>
+<p>‌Unity Technologies (2019). Unity - Scripting API: Physics.Raycast. [online] Unity3d.com. Available at: https://docs.unity3d.com/ScriptReference/Physics.Raycast.html. (Accessed  25/10/2024).</p>
+<p>‌Unity Technologies (2020). 3D character picking up item. [online] Unity Discussions. Available at: https://discussions.unity.com/t/3d-character-picking-up-item/793187. (Accessed  25/10/2024).</p>
+<h2 id="declared-assets">Declared assets</h2>
+<p>Kenney (s.d.) Crosshair Pack · Kenney. At: https://kenney.nl/assets/crosshair-pack (Accessed  25/10/2024).</p>
+<p>Kitchen Furniture Starterpack | 3D Furniture | Unity Asset Store (s.d.) At: https://assetstore.unity.com/packages/3d/props/furniture/kitchen-furniture-starterpack-209331 (Accessed  25/10/2024).</p>
+<p>Floor materials pack v.1 | 2D Floors | Unity Asset Store (s.d.) At: https://assetstore.unity.com/packages/2d/textures-materials/floors/floor-materials-pack-v-1-140435 (Accessed  25/10/2024).</p>
+<p>Free 3D Egg Models | TurboSquid (s.d.) At: https://www.turbosquid.com/Search/3D-Models/free/egg (Accessed  04/12/2024).
+恐怖 fear | Royalty-free Music (s.d.) At: https://pixabay.com/music/upbeat-fear-14380/ (Accessed  25/11/2024).</p>
+<p>microwave ding | Royalty-free Music (s.d.) At: https://pixabay.com/sound-effects/microwave-ding-104123/ (Accessed  28/11/2024).</p>
+<p>怖いもの見たさ I’ve seen scary things | Royalty-free Music (s.d.) At: https://pixabay.com/music/beats-ix27ve-seen-scary-things-151751/ (Accessed  28/11/2024).</p>
+<p>‌ ‌The following assets were created or modified with the use of GPT 4o:</p>
+<ul>
+<li>ControlTool.cs</li>
+<li>PlayerController.cs</li>
+</ul>
+
+</body>
+</html>
